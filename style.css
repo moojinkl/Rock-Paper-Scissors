@@ -1,6 +1,7 @@
 :root {
   /* Font Size */
   --font-large: 50px;
+  --font-medium: 18px;
   --font-small: 15px;
 }
 
@@ -131,16 +132,16 @@ header img {
 
 /* solo-mode */
 .solo-mode,
-.freinds-mode {
+.friends-mode {
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 9%;
-  margin: 9% 0;
-  box-shadow: 0 0 10px 0 red;
+  margin: 130px 0;
 }
 
-.solo-mode span {
+.solo-mode span,
+.friends-mode span {
   color: #ffffff;
   font-size: var(--font-large);
   font-weight: bold;
@@ -171,12 +172,30 @@ header img {
 
 .play-bar {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   max-width: 515px;
   min-width: 300px;
   height: 70px;
-  background: rgba(246, 246, 246, 0.36);
+  background: rgba(255, 255, 255, 0.432);
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(67.95704650878906px);
+  border: 1px solid rgba(228, 228, 228, 0.46);
   border-radius: 16px;
   margin: 0 auto;
 }
+
+.play-bar button {
+  font-size: var(--font-small);
+  font-weight: bold;
+}
+
+.play-bar span {
+  width: 1px;
+  height: 45px;
+  background-color: #807f7f;
+  opacity: 0.46;
+  margin: auto 0;
+  border-radius: 5px;
+}
+
 /* friends-mode */

@@ -34,7 +34,7 @@
       <button class="btn-help"><img src="./img/btn-help.png" alt="" /></button>
     </section>
 
-    <section id="solo-mode"">
+    <section id="solo-mode" style="display: none">
         <div class="solo-mode">
       <section class="player-computer">
         <div class="title-bar">Computer</div>
@@ -47,22 +47,29 @@
 
       <section class="play-bar">
       <button class="btn-sissors">가위 내기</button>
+      <span></span>
       <button class="btn-rock">바위 내기</button>
+      <span></span>
       <button class="btn-paper">보 내기</button>
     </section>
 
     </section>
 
-    <section id="friends-mode" style="display: none">
+    <section id="friends-mode" style="display: block">
+      <section class="friends-mode">
         <section class="player-1">
-            <div class="title-bar">Computer</div>
+            <div class="title-bar">Player 1</div>
           </section>
           <span>vs</span>
           <section class="player-2">
-            <div class="title-bar">Me</div>
+            <div class="title-bar">Player 2</div>
           </section>
         </section>
+      </section>
+        <section class="play-bar">
+          <button class="btn-start">가위바위보 게임하기</button>
     </section>
+  </section>
     <script></script>
   </body>
 </html>
