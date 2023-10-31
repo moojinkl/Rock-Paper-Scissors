@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>가위바위보</title>
+    <link
+      href="https://fonts.cdnfonts.com/css/sf-pro-display"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <img class="heart-logo" src="./img/heart-logo.png" alt="하트 로고" />
+      <strong>Rock</strong>
+      <strong>Sissors</strong>
+      <strong>Paper</strong>
+
+      <button class="btn-dark">
+        <img src="./img/btn-dark.png" alt="다크모드 전환 버튼" />
+      </button>
+      <div class="date">Tue Oct 31 3:17</div>
+    </header>
+
+    <section id="main" style="display: none">
+      <h3>Hello!</h3>
+      <p>Please select a game mode.</p>
+      <button class="btn-solo">Solo mode</button>
+      <button class="btn-friends">Friends mode</button>
+      <button class="btn-help"><img src="./img/btn-help.png" alt="" /></button>
+    </section>
+
+    <section id="solo-mode"">
+        <div class="solo-mode">
+      <section class="player-computer">
+        <div class="title-bar">Computer</div>
+      </section>
+      <span>vs</span>
+      <section class="player-me">
+        <div class="title-bar">Me</div>
+      </section>
+    </div>
+
+      <section class="play-bar">
+      <button class="btn-sissors">가위 내기</button>
+      <button class="btn-rock">바위 내기</button>
+      <button class="btn-paper">보 내기</button>
+    </section>
+
+    </section>
+
+    <section id="friends-mode" style="display: none">
+        <section class="player-1">
+            <div class="title-bar">Computer</div>
+          </section>
+          <span>vs</span>
+          <section class="player-2">
+            <div class="title-bar">Me</div>
+          </section>
+        </section>
+    </section>
+    <script></script>
+  </body>
+</html>
