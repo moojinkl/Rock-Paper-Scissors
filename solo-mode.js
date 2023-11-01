@@ -42,7 +42,7 @@ const game = (user, computer) => {
 const play = (event) => {
   const userText = event.target.innerText;
   const user = userText.replace(' 내기', '');
-  const randomIndex = Math.floor(Math.random() * 3);
+  const randomIndex = Math.floor(Math.random() * (2 - 0 + 1)) + 0;
   const computer = gameResult[randomIndex];
 
   const userImage = document.getElementById('user-image');
