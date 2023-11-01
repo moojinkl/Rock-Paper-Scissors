@@ -17,7 +17,7 @@
     <header>
       <img class="heart-logo" src="./img/heart-logo.png" alt="하트 로고" />
       <strong>Rock</strong>
-      <strong>Sissors</strong>
+      <strong>Scissors</strong>
       <strong>Paper</strong>
 
       <button class="btn-dark">
@@ -26,7 +26,8 @@
       <div class="date">Tue Oct 31 3:17</div>
     </header>
 
-    <section id="main" style="display: none">
+    <!-- main -->
+    <section id="main">
       <h3>Hello!</h3>
       <p>Please select a game mode.</p>
       <button class="btn-solo">Solo mode</button>
@@ -34,28 +35,32 @@
       <button class="btn-help"><img src="./img/btn-help.png" alt="" /></button>
     </section>
 
-    <section id="solo-mode" style="display: none">
+    <!-- solo-mode -->
+    <section id="solo-mode">
         <div class="solo-mode">
       <section class="player-computer">
         <div class="title-bar">Computer</div>
+        <img id="computer-image" src="" alt="" />
       </section>
       <span>vs</span>
-      <section class="player-me">
+      <section class="player-user">
         <div class="title-bar">Me</div>
+        <img id="user-image" src="" alt="" />
       </section>
     </div>
 
       <section class="play-bar">
-      <button class="btn-sissors">가위 내기</button>
+      <button class="btn-play">가위 내기</button>
       <span></span>
-      <button class="btn-rock">바위 내기</button>
+      <button class="btn-play">바위 내기</button>
       <span></span>
-      <button class="btn-paper">보 내기</button>
+      <button class="btn-play">보 내기</button>
     </section>
 
     </section>
 
-    <section id="friends-mode" style="display: block">
+    <!-- friends-mode -->
+    <section id="friends-mode">
       <section class="friends-mode">
         <section class="player-1">
             <div class="title-bar">Player 1</div>
@@ -65,11 +70,24 @@
             <div class="title-bar">Player 2</div>
           </section>
         </section>
-      </section>
+     
         <section class="play-bar">
           <button class="btn-start">가위바위보 게임하기</button>
     </section>
-  </section>
-    <script></script>
+  </section> 
+</section>
+
+<div id="modal" class="modal">
+<div class="modal-result">
+  <img src="./img/lose-img.png" alt="">
+</div>
+<button class="modal-replay">다시하기</button>
+<button class="modal-return">처음으로 돌아가기</button>
+<button class="modal-close">X</button>
+</div>
+    <script src="./index.js"></script>
+    <script src="./solo-mode.js"></script>
+    <!-- <script src="./friends-mode.js"></script> -->
+
   </body>
 </html>
