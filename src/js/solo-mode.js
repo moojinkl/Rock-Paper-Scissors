@@ -6,31 +6,32 @@ const modal = document.getElementById('modal');
 const gameResult = ['가위', '바위', '보'];
 
 const imgUrls = {
-  가위: './img/scissors.png',
-  바위: './img/rock.png',
-  보: './img/paper.png',
+  가위: '/img/scissors.png',
+  바위: '/img/rock.png',
+  보: '/img/paper.png',
 };
 
+// 가위바위보 승패
 const game = (user, computer) => {
   let message = '';
   let resultImg = '';
 
   if (user === computer) {
     message = 'Draw.';
-    resultImg = './img/draw-img.png';
+    resultImg = '/img/draw-img.png';
   } else {
     switch (user + computer) {
       case '가위보':
       case '바위가위':
       case '보바위':
         message = 'You Win!';
-        resultImg = './img/win-img.png';
+        resultImg = '/img/win-img.png';
         break;
       case '보가위':
       case '가위바위':
       case '바위보':
         message = 'You Losed..';
-        resultImg = './img/lose-img.png';
+        resultImg = '/img/lose-img.png';
         break;
     }
   }
@@ -39,11 +40,21 @@ const game = (user, computer) => {
   }, 3500);
 };
 
+// 게임이 시작되고, 모달창이 떴다가 닫힐 때 까지 '~내기' 버튼 비활성화
+const stopPlay = () => {
+  buttons.forEach((button) => {
+    button.removeEventListener('click', play);
+  });
+};
+
+// 게임
 const play = (event) => {
   const userText = event.target.innerText;
   const user = userText.replace(' 내기', '');
   const randomIndex = Math.floor(Math.random() * (2 - 0 + 1)) + 0;
   const computer = gameResult[randomIndex];
+
+  stopPlay();
 
   const userImage = document.getElementById('user-image');
   const computerImage = document.getElementById('computer-image');
@@ -84,20 +95,23 @@ const showModal = (message, resultImg) => {
   modalResult.appendChild(imgElement);
 
   modal.style.display = 'block';
+  disableGame();
 };
 
-const modalClose = document.querySelector('.modal-close');
-modalClose.addEventListener('click', () => {
-  modal.style.display = 'none';
-});
+const disableGame = () => {
+  buttons.forEach((button) => {
+    button.removeEventListener('click', play);
+  });
+};
 
 // '다시하기' 버튼
 const replayBtn = document.querySelector('.modal-replay');
 replayBtn.addEventListener('click', () => {
-  replay();
+  modal.style.display = 'none';
+  resetGame();
 });
 
-function replay() {
+const resetGame = () => {
   const userImage = document.getElementById('user-image');
   const computerImage = document.getElementById('computer-image');
   const modal = document.getElementById('modal');
@@ -107,4 +121,17 @@ function replay() {
   computerImage.src = ''; // 컴퓨터 이미지 초기화
   computerImage.alt = '';
   modal.style.display = 'none'; // 모달 숨기기
-}
+
+  buttons.forEach((button) => {
+    button.addEventListener('click', play);
+  });
+};
+
+// '처음으로 돌아가기' 버튼
+const returnBtn = document.querySelector('.modal-return');
+returnBtn.addEventListener('click', () => {
+  soloMode.style.display = 'none';
+  modal.style.display = 'none';
+  main.style.display = 'block';
+  resetGame();
+});

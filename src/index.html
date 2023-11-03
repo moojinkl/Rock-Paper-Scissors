@@ -11,17 +11,17 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <header>
-      <img class="heart-logo" src="./img/heart-logo.png" alt="하트 로고" />
+      <img class="heart-logo" src="/img/heart-logo.png" alt="하트 로고" />
       <strong>Rock</strong>
       <strong>Paper</strong>
       <strong>Scissors</strong>
 
       <button class="btn-dark">
-        <img src="./img/btn-dark.png" alt="다크모드 전환 버튼" />
+        <img src="/img/btn-dark.png" alt="다크모드 전환 버튼" />
       </button>
       <div class="date">Tue Oct 31 3:17</div>
     </header>
@@ -32,7 +32,7 @@
       <p>Please select a game mode.</p>
       <button class="btn-solo">Solo mode</button>
       <button class="btn-friends">Friends mode</button>
-      <button class="btn-help"><img src="./img/btn-help.png" alt="" /></button>
+      <button class="btn-help"><img src="/img/btn-help.png" alt="" /></button>
     </section>
 
     <!-- solo-mode -->
@@ -62,12 +62,14 @@
     <!-- friends-mode -->
     <section id="friends-mode">
       <section class="friends-mode">
-        <section class="player-1">
+        <section class="player-one">
             <div class="title-bar">Player 1</div>
+            <img id="player-one-img" src="" alt="" />
           </section>
           <span>vs</span>
-          <section class="player-2">
+          <section class="player-two">
             <div class="title-bar">Player 2</div>
+            <img id="player-two-img" src="" alt="" />
           </section>
         </section>
     
@@ -77,17 +79,17 @@
   </section> 
 </section>
 
+<!-- modal -->
 <div id="modal" class="modal">
 <div class="modal-result">
-  <img src="./img/lose-img.png" alt="">
+  <img src="/img/lose-img.png" alt="">
 </div>
 <button class="modal-replay">다시하기</button>
 <button class="modal-return">처음으로 돌아가기</button>
-<button class="modal-close">X</button>
 </div>
-    <script src="./index.js"></script>
-    <script src="./solo-mode.js"></script>
-    <!-- <script src="./friends-mode.js"></script> -->
+    <script src="./js/index.js"></script>
+    <script src="./js/solo-mode.js"></script>
+    <script src="./js/friends-mode.js"></script>
 
   </body>
 </html>
