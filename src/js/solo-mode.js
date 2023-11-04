@@ -12,13 +12,13 @@ const soloGame = (playerOne, playerTwo) => {
       case '바위가위':
       case '보바위':
         message = 'You Win!';
-        resultImg = '/img/win-img.png';
+        resultImg = '../img/win-img.png';
         break;
       case '보가위':
       case '가위바위':
       case '바위보':
         message = 'You Losed..';
-        resultImg = '/img/lose-img.png';
+        resultImg = '../img/lose-img.png';
         break;
     }
   }

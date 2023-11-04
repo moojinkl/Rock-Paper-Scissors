@@ -9,9 +9,9 @@ const friendsTwoImage = document.querySelector('.friends-two-img');
 
 const gameResult = ['가위', '바위', '보'];
 const imgUrls = {
-  가위: '/img/scissors.png',
-  바위: '/img/rock.png',
-  보: '/img/paper.png',
+  가위: '../img/scissors.png',
+  바위: '../img/rock.png',
+  보: '../img/paper.png',
 };
 
 // 게임이 시작되고, 모달창이 떴다가 닫힐 때 까지 '~내기' 버튼 비활성화
