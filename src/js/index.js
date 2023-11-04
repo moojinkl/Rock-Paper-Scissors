@@ -44,18 +44,19 @@ dateTime.textContent = formattedDate;
 
 // help 버튼
 const boxBackground = document.querySelector('.box-background');
+const helpClose = () => {
+  helpBox.style.display = 'none';
+  boxBackground.style.display = 'none';
+};
 
 helpBtn.addEventListener('click', () => {
   helpBox.style.display = 'block';
   boxBackground.style.display = 'block';
 });
-if ((helpBox.style.display = 'block')) {
-  helpBox.addEventListener('click', () => {
-    helpBox.style.display = 'none';
-    boxBackground.style.display = 'none';
-  });
-  boxBackground.addEventListener('click', () => {
-    helpBox.style.display = 'none';
-    boxBackground.style.display = 'none';
-  });
-}
+
+helpBox.addEventListener('click', () => {
+  helpClose();
+});
+boxBackground.addEventListener('click', () => {
+  helpClose();
+});
