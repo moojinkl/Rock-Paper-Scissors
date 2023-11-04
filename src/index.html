@@ -23,73 +23,81 @@
       <button class="btn-dark">
         <img src="/img/btn-dark.png" alt="다크모드 전환 버튼" />
       </button>
-      <div class="date">Tue Oct 31 3:17</div>
+      <div class="date-time"></div>
     </header>
+    <div class="box-background"></div>
 
     <!-- main -->
     <section id="main">
       <h3>Hello!</h3>
-      <p>Please select a game mode.</p>
+      <span>게임 모드를 선택해주세요!</span>
       <button class="btn-solo">Solo mode</button>
       <button class="btn-friends">Friends mode</button>
       <button class="btn-help"><img src="/img/btn-help.png" alt="" /></button>
+      <p class="help-box">
+        <strong>Solo mode</strong> : 가위, 바위, 보 중 내고 싶은 것을 선택할 수
+        있고 컴퓨터와 대결합니다.
+        <br />
+        <strong>Friends mode</strong> : 두 명의 플레이어가 모두 랜덤으로 지정된
+        가위바위보 무기로 승패를 결정합니다.
+      </p>
     </section>
 
     <!-- solo-mode -->
     <section id="solo-mode">
-        <div class="solo-mode">
-      <section class="player-computer">
-        <div class="title-bar">Computer</div>
-        <img id="computer-image" src="" alt="" />
-      </section>
-      <span>vs</span>
-      <section class="player-user">
-        <div class="title-bar">Me</div>
-        <img id="user-image" src="" alt="" />
-      </section>
-    </div>
+      <div class="solo-mode">
+        <section class="player-one">
+          <div class="title-bar">Computer</div>
+          <img class="one-img" src="" alt="" />
+        </section>
+        <span>vs</span>
+        <section class="player-two">
+          <div class="title-bar">Me</div>
+          <img class="two-img" src="" alt="" />
+        </section>
+      </div>
 
       <section class="play-bar">
-      <button class="btn-play">가위 내기</button>
-      <span></span>
-      <button class="btn-play">바위 내기</button>
-      <span></span>
-      <button class="btn-play">보 내기</button>
-    </section>
-
+        <button class="btn-play">가위 내기</button>
+        <span></span>
+        <button class="btn-play">바위 내기</button>
+        <span></span>
+        <button class="btn-play">보 내기</button>
+      </section>
     </section>
 
     <!-- friends-mode -->
     <section id="friends-mode">
       <section class="friends-mode">
         <section class="player-one">
-            <div class="title-bar">Player 1</div>
-            <img id="player-one-img" src="" alt="" />
-          </section>
-          <span>vs</span>
-          <section class="player-two">
-            <div class="title-bar">Player 2</div>
-            <img id="player-two-img" src="" alt="" />
-          </section>
+          <div class="title-bar">Player 1</div>
+          <img class="friends-one-img" src="" alt="" />
         </section>
-    
-        <section class="play-bar">
-          <button class="btn-start">가위바위보 게임하기</button>
-    </section>
-  </section> 
-</section>
+        <span>vs</span>
+        <section class="player-two">
+          <div class="title-bar">Player 2</div>
+          <img class="friends-two-img" src="" alt="" />
+        </section>
+      </section>
 
-<!-- modal -->
-<div id="modal" class="modal">
-<div class="modal-result">
-  <img src="/img/lose-img.png" alt="">
-</div>
-<button class="modal-replay">다시하기</button>
-<button class="modal-return">처음으로 돌아가기</button>
-</div>
+      <section class="play-bar">
+        <button class="btn-play">가위바위보 게임하기</button>
+      </section>
+    </section>
+
+    <!-- modal -->
+    <div id="modal" class="modal">
+      <div class="modal-result">
+        <img src="/img/lose-img.png" alt="" />
+      </div>
+      <button class="modal-replay">다시하기</button>
+      <button class="modal-return">처음으로 돌아가기</button>
+    </div>
+
     <script src="./js/index.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/game.js"></script>
     <script src="./js/solo-mode.js"></script>
     <script src="./js/friends-mode.js"></script>
-
   </body>
 </html>

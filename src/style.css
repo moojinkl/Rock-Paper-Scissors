@@ -52,7 +52,7 @@ header img {
   width: 16px;
 }
 
-.date {
+.date-time {
   word-spacing: 5px;
   font-weight: bold;
   padding-right: 19px;
@@ -75,14 +75,17 @@ header img {
 #main h3 {
   padding-top: 88%;
   margin: 0 auto 5px;
+  font-size: var(--font-medium);
 }
 
-#main p {
+#main span {
+  display: block;
   margin: 0 auto 20px;
+  font-size: var(--font-small);
 }
 
 #main h3,
-#main p {
+#main span {
   text-align: center;
 }
 
@@ -94,6 +97,7 @@ header img {
   height: 28px;
   color: #ffffff;
   border-radius: 5px;
+  font-size: var(--font-small);
 }
 
 .btn-solo {
@@ -129,6 +133,28 @@ header img {
 
 .btn-help img {
   vertical-align: top;
+}
+
+.help-box {
+  display: none;
+  width: 250px;
+  height: 170px;
+  font-size: var(--font-small);
+  background: url(/img/help-box.png) no-repeat;
+  padding: 60px;
+  margin: 0;
+  position: absolute;
+  top: -105px;
+  right: -335px;
+}
+
+.box-background {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 /* solo-mode, friends-mode 공통 */
@@ -199,8 +225,10 @@ header img {
   border-radius: 5px;
 }
 
-#computer-image,
-#user-image {
+.one-img,
+.two-img,
+.friends-one-img,
+.friends-two-img {
   display: block;
   height: 200px;
   margin: 50px auto 0;
