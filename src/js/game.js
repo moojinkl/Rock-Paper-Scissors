@@ -1,23 +1,23 @@
-const buttons = document.querySelectorAll('.btn-play');
-const playerOne = document.querySelector('.player-one');
-const playerTwo = document.querySelector('.player-two');
-const modal = document.getElementById('modal');
-const playerOneImage = document.querySelector('.one-img');
-const playerTwoImage = document.querySelector('.two-img');
-const friendsOneImage = document.querySelector('.friends-one-img');
-const friendsTwoImage = document.querySelector('.friends-two-img');
+const buttons = document.querySelectorAll(".btn-play");
+const playerOne = document.querySelector(".player-one");
+const playerTwo = document.querySelector(".player-two");
+const modal = document.getElementById("modal");
+const playerOneImage = document.querySelector(".one-img");
+const playerTwoImage = document.querySelector(".two-img");
+const friendsOneImage = document.querySelector(".friends-one-img");
+const friendsTwoImage = document.querySelector(".friends-two-img");
 
-const gameResult = ['가위', '바위', '보'];
+const gameResult = ["가위", "바위", "보"];
 const imgUrls = {
-  가위: '../img/scissors.png',
-  바위: '../img/rock.png',
-  보: '../img/paper.png',
+  가위: "../img/scissors.png",
+  바위: "../img/rock.png",
+  보: "../img/paper.png",
 };
 
 // 게임이 시작되고, 모달창이 떴다가 닫힐 때 까지 '~내기' 버튼 비활성화
 const stopPlay = () => {
   buttons.forEach((button) => {
-    button.removeEventListener('click', play);
+    button.removeEventListener("click", play);
   });
 };
 
@@ -33,8 +33,8 @@ const play = (event) => {
   let currentIndex = 0;
 
   // solo mode
-  if (playerTwoText.includes('내기')) {
-    playerTwo = playerTwoText.replace(' 내기', '');
+  if (playerTwoText.includes("내기")) {
+    playerTwo = playerTwoText.replace(" 내기", "");
 
     playerTwoImage.src = imgUrls[playerTwo];
     playerTwoImage.alt = playerTwo;
@@ -52,6 +52,7 @@ const play = (event) => {
     }, 2000);
     soloGame(playerOne, playerTwo);
   }
+
   // friends mode
   else {
     playerTwo = gameResult[friendsRandomIndex];
@@ -79,5 +80,5 @@ const play = (event) => {
 };
 
 buttons.forEach((button) => {
-  button.addEventListener('click', play);
+  button.addEventListener("click", play);
 });
